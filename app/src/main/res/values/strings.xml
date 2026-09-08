@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">s8189084Assignment2</string>
+    <string name="login_screen_label">Login</string>
+    <string name="dashboard_screen_label">Dashboard</string>
+    <string name="details_screen_label">Details</string>
 </resources>
