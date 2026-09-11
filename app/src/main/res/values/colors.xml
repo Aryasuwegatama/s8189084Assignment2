@@ -11,4 +11,7 @@
     <color name="text_secondary">#646464</color>
     <color name="error_background">#FDE8E8</color>
     <color name="error_text">#B3261E</color>
+
+    <!-- Colors used on the Dashboard screen -->
+    <color name="badge_not_olympic_background">#E6E6E6</color>
 </resources>

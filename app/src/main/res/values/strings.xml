@@ -12,4 +12,12 @@
     <string name="login_password_label">Password</string>
     <string name="login_button">LOGIN</string>
     <string name="login_button_loading">Logging in…</string>
+
+    <!-- Dashboard screen -->
+    <string name="dashboard_title">Sports</string>
+    <string name="dashboard_subtitle">%1$d sports available</string>
+    <string name="dashboard_player_count">%1$d players</string>
+    <string name="badge_olympic">OLYMPIC SPORT</string>
+    <string name="badge_not_olympic">NOT OLYMPIC</string>
+    <string name="dashboard_retry_button">Retry</string>
 </resources>
