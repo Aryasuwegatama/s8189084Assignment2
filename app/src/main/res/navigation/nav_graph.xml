@@ -11,6 +11,8 @@
         android:label="@string/login_screen_label"
         tools:layout="@layout/fragment_login">
 
+        <!-- If login succeeds, go to Dashboard and remove Login from the back stack,
+             so the back button on Dashboard exits the app instead of returning to Login. -->
         <action
             android:id="@+id/action_loginFragment_to_dashboardFragment"
             app:destination="@id/dashboardFragment"
@@ -25,10 +27,12 @@
         android:label="@string/dashboard_screen_label"
         tools:layout="@layout/fragment_dashboard">
 
+        <!-- The keypass from a successful login, used for every Dashboard API call. -->
         <argument
             android:name="keypass"
             app:argType="string" />
 
+        <!-- Going to Details keeps Dashboard on the back stack, so back returns to the list. -->
         <action
             android:id="@+id/action_dashboardFragment_to_detailsFragment"
             app:destination="@id/detailsFragment" />

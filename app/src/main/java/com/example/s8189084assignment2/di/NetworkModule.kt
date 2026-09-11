@@ -16,10 +16,12 @@ import javax.inject.Singleton
 
 private const val BASE_URL = "https://nit3213apinew.onrender.com/"
 
+// Provides Moshi, Retrofit, and ApiService, and binds SportsRepository to its implementation.
 @Module
 @InstallIn(SingletonComponent::class)
 abstract class NetworkModule {
 
+    // Whenever something asks for a SportsRepository, give it a SportsRepositoryImpl.
     @Binds
     @Singleton
     abstract fun bindSportsRepository(
@@ -28,6 +30,7 @@ abstract class NetworkModule {
 
     companion object {
 
+        // Converts JSON to Kotlin objects and back, using reflection.
         @Provides
         @Singleton
         fun provideMoshi(): Moshi {
@@ -36,6 +39,7 @@ abstract class NetworkModule {
                 .build()
         }
 
+        // Retrofit is the HTTP client, it uses Moshi to convert every request and response.
         @Provides
         @Singleton
         fun provideRetrofit(moshi: Moshi): Retrofit {
@@ -45,6 +49,7 @@ abstract class NetworkModule {
                 .build()
         }
 
+        // Retrofit reads the ApiService interface and builds a real implementation of it.
         @Provides
         @Singleton
         fun provideApiService(retrofit: Retrofit): ApiService {

@@ -6,6 +6,7 @@ import com.example.s8189084assignment2.data.model.LoginResponse
 import com.example.s8189084assignment2.data.remote.ApiService
 import javax.inject.Inject
 
+// Implements SportsRepository using ApiService.
 class SportsRepositoryImpl @Inject constructor(
     private val apiService: ApiService
 ) : SportsRepository {

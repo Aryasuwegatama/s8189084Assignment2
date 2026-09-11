@@ -3,9 +3,9 @@ package com.example.s8189084assignment2.data.model
 import android.os.Parcel
 import android.os.Parcelable
 
-// Parcelable is implemented manually here instead of with @Parcelize.
-// The kotlin-parcelize compiler plugin does not currently hook into AGP 9's
-// built-in Kotlin compilation, so its codegen never runs (see Phase 4 notes).
+// One sport's details, passed from Dashboard to Details through Safe Args.
+//
+// Parcelable is written manually, since kotlin-parcelize doesn't work with this project's Kotlin setup.
 data class Sport(
     val sportName: String,
     val playerCount: Int,
@@ -14,6 +14,7 @@ data class Sport(
     val description: String
 ) : Parcelable {
 
+    // Rebuilds a Sport from a Parcel.
     constructor(parcel: Parcel) : this(
         sportName = parcel.readString() ?: "",
         playerCount = parcel.readInt(),
@@ -22,6 +23,7 @@ data class Sport(
         description = parcel.readString() ?: ""
     )
 
+    // Writes every field into the Parcel.
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(sportName)
         parcel.writeInt(playerCount)
@@ -32,6 +34,7 @@ data class Sport(
 
     override fun describeContents(): Int = 0
 
+    // Required by Parcelable, turns a Parcel back into a Sport.
     companion object CREATOR : Parcelable.Creator<Sport> {
         override fun createFromParcel(parcel: Parcel): Sport = Sport(parcel)
         override fun newArray(size: Int): Array<Sport?> = arrayOfNulls(size)

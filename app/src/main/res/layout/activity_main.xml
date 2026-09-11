@@ -7,6 +7,8 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!-- This is the single screen container, every Fragment (Login, Dashboard, Details)
+         gets swapped in and out here by the Navigation Component. -->
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/nav_host_fragment"
         android:name="androidx.navigation.fragment.NavHostFragment"

@@ -1,6 +1,15 @@
 <resources>
+    <!-- App name, and the label shown for each screen in the navigation back stack -->
     <string name="app_name">s8189084Assignment2</string>
     <string name="login_screen_label">Login</string>
     <string name="dashboard_screen_label">Dashboard</string>
     <string name="details_screen_label">Details</string>
+
+    <!-- Login screen -->
+    <string name="login_title">Sports Explorer</string>
+    <string name="login_subtitle">Sign in to explore sports information</string>
+    <string name="login_student_id_label">Student ID (Enter without "s")</string>
+    <string name="login_password_label">Password</string>
+    <string name="login_button">LOGIN</string>
+    <string name="login_button_loading">Logging in…</string>
 </resources>
