@@ -14,4 +14,7 @@
 
     <!-- Colors used on the Dashboard screen -->
     <color name="badge_not_olympic_background">#E6E6E6</color>
+
+    <!-- Colors used on the Details screen -->
+    <color name="divider">#CAC4D0</color>
 </resources>

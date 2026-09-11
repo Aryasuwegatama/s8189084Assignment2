@@ -8,6 +8,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -36,8 +37,10 @@ class DashboardFragment : Fragment(R.layout.fragment_dashboard) {
         val errorText = view.findViewById<TextView>(R.id.errorText)
         val retryButton = view.findViewById<MaterialButton>(R.id.retryButton)
 
-        val adapter = SportAdapter(onSportClick = {
-            // TODO: navigate to Details with the selected sport.
+        // Set up the sports list and open the selected sport when tapped.
+        val adapter = SportAdapter(onSportClick = { sport ->
+            val action = DashboardFragmentDirections.actionDashboardFragmentToDetailsFragment(sport)
+            findNavController().navigate(action)
         })
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         recyclerView.adapter = adapter

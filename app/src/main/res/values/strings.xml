@@ -20,4 +20,13 @@
     <string name="badge_olympic">OLYMPIC SPORT</string>
     <string name="badge_not_olympic">NOT OLYMPIC</string>
     <string name="dashboard_retry_button">Retry</string>
+
+    <!-- Details screen -->
+    <string name="details_toolbar_title">Sport Details</string>
+    <string name="details_players_label">Players</string>
+    <string name="details_field_type_label">Field Type</string>
+    <string name="details_olympic_status_label">Olympic Status</string>
+    <string name="details_description_label">DESCRIPTION</string>
+    <string name="details_olympic_yes">Yes</string>
+    <string name="details_olympic_no">No</string>
 </resources>

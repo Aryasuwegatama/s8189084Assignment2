@@ -43,6 +43,13 @@
         android:id="@+id/detailsFragment"
         android:name="com.example.s8189084assignment2.ui.details.DetailsFragment"
         android:label="@string/details_screen_label"
-        tools:layout="@layout/fragment_details" />
+        tools:layout="@layout/fragment_details">
+
+        <!-- The sport tapped on Dashboard, carries every field this screen shows. -->
+        <argument
+            android:name="sport"
+            app:argType="com.example.s8189084assignment2.data.model.Sport" />
+
+    </fragment>
 
 </navigation>
