@@ -1,8 +1,10 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.S8189084Assignment2" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <!-- Keeps every Material component on the app's own blue instead of a per-device default -->
+        <item name="colorPrimary">@color/primary_blue</item>
+        <!-- Keeps default text color dark and readable on every device -->
+        <item name="colorOnSurface">@color/text_primary</item>
     </style>
 
     <style name="Theme.S8189084Assignment2" parent="Base.Theme.S8189084Assignment2" />
